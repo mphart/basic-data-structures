@@ -9,10 +9,9 @@
 #include <memory.h>
 #include <string.h>
 
-#define LIST_TEST
-
 const LIST_SIZE_REFACTOR = 2;         // factor by which the list resizes
 const MINIMUM_LIST_SIZE_FOR_SHRINK = 10; // if the list has this many items, it won't shrink
+
 
 typedef struct {
     int length;   // number of items in the list
