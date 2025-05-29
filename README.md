@@ -1,2 +1,3 @@
 # Basic Data Structures
-Common computational data structures implemented from scratch in C
+Common computational data structures implemented from scratch in C:
+-List
