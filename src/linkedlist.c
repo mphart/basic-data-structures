@@ -25,7 +25,7 @@ typedef struct{
     int elementSize;  // size of a single element
 } linkedlist;
 
-
+#ifdef LINKED_LIST_TEST
 int main(){
 
     linkedlist ll;
@@ -39,9 +39,8 @@ int main(){
 
 
     return 0;
-
-
 }
+#endif
 
 // initialize the linked list
 int initLinkedList(linkedlist *ll){
@@ -80,8 +79,9 @@ int addToLinkedList(linkedlist *list, int element){
     newNode->payload = element;
     // edge case: head is null (list is empty)
     if(list->head == NULL){
-        list->head = newNode;
-        list->tail = newNode;
+        list->head = malloc(list->elementSize);
+        list->head->payload = element;
+        list->tail = list->tail;
     } // list has one element (head == tail)
     else if(list->tail->prev == NULL){
         list->tail = newNode;
