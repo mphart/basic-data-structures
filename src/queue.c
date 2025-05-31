@@ -19,9 +19,6 @@ typedef struct {
     int elementSize;  // size of a single element
 } queue;
 
-int main(){
-    return 0;
-}
 
 // initialize the queue to allocate ELEMENTSIZE * 
 int initQueue(queue *q, int initSize, int elementSize){
