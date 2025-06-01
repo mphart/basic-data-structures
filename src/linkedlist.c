@@ -10,20 +10,7 @@
 #include <memory.h>
 #include <string.h>
 
-
-typedef struct node node;
-struct node {
-    node* prev;    // the previous node in the list
-    node* next;    // the next node in the list
-    int payload;   // the value of this node
-};
-
-typedef struct{
-    node* head;     // pointer to the first element in the list
-    node* tail;     // pointer to the last element in the list
-    int length;     // number of elements in the list
-    int elementSize;  // size of a single element
-} linkedlist;
+#include "linkedlist.h"
 
 #ifdef LINKED_LIST_TEST
 int main(){
